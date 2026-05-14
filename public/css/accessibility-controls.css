@@ -1,0 +1,46 @@
+.invert-filter{filter:invert(1)}
+.saturation-filter{filter:saturate(0.5)}
+.hide-img img{visibility:hidden!important;opacity:0!important}
+.cursor-size{cursor: url('../images/cursor-size.svg'), auto !important}
+.cursor-size a, .cursor-size button{cursor: url('../images/cursor-size-pointer.svg'), auto !important}
+/* Dark Mode CSS Start */
+:root.dark-mode{--OneColor:#ff0;--TwoColor:#ff0;--ThreeColor:#ff0;--FourColor:#ff0;--FiveColor:#ff0;--SixColor:#ff0;--SevenColor:#ff0;--GrayColor:#ff0}
+.dark-mode header.header_section{background:#0b0c0e}
+.dark-mode ::placeholder{color:var(--OneColor)}
+.dark-mode .inner_digital_image img{-webkit-filter:invert(1);filter:invert(1)}
+.dark-mode .offcanvas_accsbility, .dark-mode .offcanvas_menu_custom{background:#0b0c0e}
+.dark-mode .offcanvas_accsbility .btn-close{filter:invert(1)}
+.dark-mode .navbar-sec{background:#0b0c0e}
+.dark-mode .nav_bg_cusotom{background:#0b0c0e;border-bottom: 2px solid #0b0c0e}
+.dark-mode .nav_bg_cusotom .dropdown-menu li a:focus, .dark-mode .nav_bg_cusotom .dropdown-menu li a:focus-visible, .dark-mode .nav_bg_cusotom .dropdown-menu li a:hover, .dark-mode .nav_bg_cusotom .dropdown-menu li:focus, .dark-mode .nav_bg_cusotom .dropdown-menu li:focus-visible, .dark-mode .nav_bg_cusotom .dropdown-menu li:hover{background-color:#23232a!important}
+.dark-mode .nav_bg_cusotom .dropdown-menu li a{color:var(--OneColor)}
+.dark-mode .nav_bg_cusotom .home_menu_items.active, .dark-mode .nav_bg_cusotom .nav-item:hover .home_menu_items{color:#000!important}
+.dark-mode .nav_bg_cusotom .dropdown-menu{background:rgba(0, 0, 0, .7)}
+.dark-mode .dropdown_cust_menu .inner_list li a:hover, .dark-mode .dropdown_cust_menu .bhashini-branding{background:#23232a!important}
+.dark-mode .inner_box_acces.active{border:1px solid var(--OneColor);background-color:#23232a}
+.dark-mode .offcanvas-title{color:var(--OneColor)}
+.dark-mode .offcanvas-title svg path{fill:var(--OneColor)}
+.dark-mode .nav_bg_cusotom .dropdown-menu:before{border-bottom:8px solid rgba(0, 0, 0, .7)}
+.dark-mode ul.icons_list_top_header .dropdown_cust_menu{background:rgb(11 12 14)}
+.dark-mode .news-updates-bg{background:#23232a}
+.dark-mode .all_heading{color:var(--FiveColor)}
+.dark-mode .news-updates-bg .quick-btn{color:#000}
+.dark-mode .news-updates-bg button:hover{color:#000}
+.dark-mode .working-groups-sec{background:#0b0c0e}
+.dark-mode .working-groups-box ul li{background:#23232a}
+.dark-mode .working-groups-box ul li img{filter:brightness(0) invert(1)}
+.dark-mode .working-groups-box ul li p{color:var(--OneColor)}
+.dark-mode .working-groups-box ul li:hover{background:#0b0c0e}
+.dark-mode .event-sec:before{background:#23232a}
+.dark-mode .ksc-steering .card-sec{background:#0b0c0e}
+.dark-mode .past-events-ticker .card-sec{background:#0b0c0e}
+.dark-mode .quick-btn{background:var(--OneColor);color:#000;border-color:var(--OneColor)}
+.dark-mode .cops-sec{background:#0b0c0e}
+.dark-mode .footer-sec{background:#23232a}
+/* Dark Mode CSS End */
+/* Highlight Link CSS End */
+.highlight-link a:not([title="Skip to main Content"]){color:#ff0!important;background-color:#000!important}
+.highlight-link a *{color:#ff0!important}
+.highlight-link .header_section .logo_box_cust img{filter:brightness(0) invert(1)}
+.highlight-link .working-groups-box ul li img{filter:brightness(0) invert(1)}
+/* Highlight Link CSS End */

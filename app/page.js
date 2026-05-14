@@ -1,66 +1,176 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
+"use client";
+import { useState } from "react";
+import Link from "next/link";
 export default function Home() {
+  const [activeTab, setActiveTab] = useState("rent");
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      {/* banner section start here */}
+      <div className="banner-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-lg-6 d-flex align-items-center">
+              <div className="banner-title">Travel anywhere together. Spend smarter.</div>
+            </div>
+            <div className="col-12 col-lg-6">
+              <img className="banner-img" src="/images/banner.jpg" alt="gaadi ride" />
+            </div>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </div>
+      {/* banner section end here */}
+
+      {/* search section start here */}
+      <div className="search-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-lg-12">
+              <div className="booking-box">
+
+                {/* Tabs */}
+                <div className="tabs">
+                  <button 
+                    className={`tab-btn ${activeTab === "rent" ? "active" : ""}`} 
+                    onClick={() => setActiveTab("rent")}
+                  >
+                    Instant Rent
+                  </button>
+                  <button 
+                    className={`tab-btn ${activeTab === "driver" ? "active" : ""}`} 
+                    onClick={() => setActiveTab("driver")}
+                  >
+                    Private Driver
+                  </button>
+                  <button 
+                    className={`tab-btn ${activeTab === "trip" ? "active" : ""}`} 
+                    onClick={() => setActiveTab("trip")}
+                  >
+                    Long Trip
+                  </button>
+                </div>
+
+                {/* Instant Rent */}
+                <div className={`tab-content ${activeTab === "rent" ? "active" : ""}`} id="rent">
+                  <div className="form-row">
+                    <div className="field">
+                      <h4>Pickup</h4>
+                      <input type="text" className="map-icon" placeholder="Point Location" />
+                    </div>
+
+                    <div className="field">
+                      <h4>Drop Off</h4>
+                      <input type="text" className="map-icon" placeholder="Point Location" />
+                    </div>
+
+                    <div className="field">
+                      <h4>Estimate Time</h4>
+                      <input type="date" placeholder="Point Location" />
+                    </div>
+
+                    <div className="field">
+                      <h4>Return date</h4>
+                      <input type="date" placeholder="Return date" />
+                    </div>
+                    <div className="field">
+                      <h4>Passenger</h4>
+                      <input type="text" className="pass-icon" placeholder="1 passenger" />
+                    </div>
+
+                    <Link href="/listing">
+                      <button className="quick-btn">Search Here !</button>
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Private Driver */}
+                <div className={`tab-content ${activeTab === "driver" ? "active" : ""}`} id="driver">
+                  <div className="form-row">
+                    <div className="field">
+                      <h4>Pickup 2</h4>
+                      <input type="text" placeholder="Your Pickup Point" />
+                    </div>
+
+                    <div className="field">
+                      <h4>Hours</h4>
+                      <input type="text" placeholder="4 Hours" />
+                    </div>
+
+                    <div className="field">
+                      <h4>Driver Type</h4>
+                      <input type="text" placeholder="Professional Driver" />
+                    </div>
+
+                    <div className="field">
+                      <h4>Pricing</h4>
+                      <input type="text" placeholder="$ 20.00" />
+                    </div>
+
+                    <button className="rent-btn">Book Driver</button>
+                  </div>
+                </div>
+
+                {/* Long Trip */}
+                <div className={`tab-content ${activeTab === "trip" ? "active" : ""}`} id="trip">
+                  <div className="form-row">
+                    <div className="field">
+                      <h4>Pickup 3</h4>
+                      <input type="text" placeholder="Start Location" />
+                    </div>
+
+                    <div className="field">
+                      <h4>Destination</h4>
+                      <input type="text" placeholder="Destination" />
+                    </div>
+
+                    <div className="field">
+                      <h4>Days</h4>
+                      <input type="text" placeholder="2 Days" />
+                    </div>
+
+                    <div className="field">
+                      <h4>Pricing</h4>
+                      <input type="text" placeholder="$ 100.00" />
+                    </div>
+
+                    <button className="rent-btn">Book Trip</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </div>
+      {/* search section end here */}
+
+      {/* step section start here */}
+      <div className="steps-wrapper">
+        <div className="step-box">
+          <div className="icon-box">
+            <i className="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Choose location</h3>
+          <p>Choose your and find<br />your best car</p>
+        </div>
+
+        <div className="step-box">
+          <div className="icon-box">
+            <i className="fas fa-calendar-alt"></i>
+          </div>
+          <h3>Pick-up date</h3>
+          <p>Select your pick up date and<br />time to book your car</p>
+        </div>
+
+        <div className="step-box">
+          <div className="icon-box">
+            <i className="fas fa-book"></i>
+          </div>
+          <h3>Book your car</h3>
+          <p>Book your car and we will deliver<br />it directly to you</p>
+        </div>
+      </div>
+      {/* step section end here */}
+    </>
   );
 }

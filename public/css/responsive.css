@@ -1,0 +1,247 @@
+@media (max-width: 767px) {
+/*new section start here*/
+.startups-ul{grid-template-columns: 1fr;}
+.startups-section {padding: 29px 0 20px 0; margin-top: 0px;}
+
+/*header section start here*/
+.banner-bg { height: auto; border-radius: 0 0 0px 0; padding-bottom: 20px;}
+.top-header {min-height: 50px;}
+.bnr-caption { position: relative;  top: 50%;  left: 0%;  transform: none;}
+.banner-title {font-size: 14px;}
+.banner-des{font-size: 12px; padding: 0px; line-height: 16px; margin-top: 0px !important; display: none;}
+.bnr-btn, .btn-outline-light{display: none;}
+/*header section end here*/
+.profile-card {height: 100%; flex-direction: column;}
+.whats_new_bg .same {flex-direction: column; gap: 0px;}
+.controls {border-left: 0px solid #ffffff1c; padding: 0px 0;}
+.success-bg {max-height: 100%;}
+.success-bg2::before {width: 100%;}
+.equity-ul {grid-template-columns: 1fr;}
+.equity-title2 {padding: 0 0 10px 0px; color: #000;}
+.success-brd1{padding-top: 10px; padding-bottom: 0px;}
+.success-brd2{padding-top: 10px; padding-bottom: 20px;}
+.h-about-ul {gap: 10px;}
+.nav_bg_cusotom .home_menu_items.active, .nav_bg_cusotom .nav-item:hover .home_menu_items {
+   border-bottom: 2px solid var(--ThreeColor);
+    color: var(--TwoColor)!important
+}
+.success-bg2::after{background: none;}
+
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 85px;
+  border-radius: 0px;
+}
+
+.login-container::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+  z-index: 0;
+}
+.reg-container::before{background: none;}
+.reg-container::after {width: 100%;}
+/*new section end here*/
+
+/* Header Section CSS Start */
+
+.banner-thumb {grid-template-columns: 1fr; position: relative;}
+.update-title {margin-right: 24px;}
+.about-div {padding-top: 20px; padding-bottom: 20px;}
+.nav_bg_cusotom .home_menu_items { color: #000!important;}
+.material-symbols-outlined{color: #fff;}
+.nav-item .material-symbols-outlined{color: #000!important;}
+.impact_ul {display: flex; flex-direction: column; gap: 10px;}
+.impact_ul li{border: 1px solid #ffffff56 !important;}
+.heading-sec {display: block;}
+.whats-new-ul li a {display: flex; flex-direction: column;}
+.whats-new-ul li a .news-img {width: 100%;}
+.whats-new-ul li a .news-img img {height: auto; width: 100%;}
+.equity-ul li {width: 100%!important;}
+
+.media-section { padding: 30px 0px 10px;}
+.footer-other-l {padding: 30x 0 10px 0;}
+.impact-section {padding: 30px 0;}
+.pn-section {padding: 30px 0;}
+
+.mob-space{margin-top: 30px;}
+.home-about-section{padding: 30px 0;}
+.owl-dots{display: none;}
+.foot-w {width: 100%; border-right: 0px solid #ffffff1c; margin-right: 0px; margin-top: 16px;}
+.foot-link-section {display: flex; flex-direction: column;}
+.socail-div {display: flex; flex-direction: revert; gap: 6px;}
+.banner-caption {padding-right: 0px;}
+
+
+	header.header_section.is-sticky{position:initial}
+	.logo_box_cust img{width:50% !important}
+	.footer-top .logo_box_cust img{width: 50% !important;}
+	.top_logo_s a{gap:5px}
+	.logo_cust_text span.ministry_cust_text{font-size:1rem}
+	.search-sec{position:absolute;top:68px;right:45px}
+	.accessibility-sec{position:absolute;top:20px;right:12px}
+	.flex_item_box{display:flex!important;justify-content:flex-end;align-items:center;margin-top:10px}
+	/* Header Section CSS End */
+	/* Main Menu Section CSS Start */
+	.nav_bg_cusotom .navbar-collapse{position:fixed;top:0;right:-100%;z-index:9999;border-top:none;border-bottom:none;color:#212529;outline:0;border-top-left-radius:12px;border-bottom-left-radius:12px;box-shadow:-4px 4px 12px 0 rgba(0, 0, 0, .25);background:#fff;width:0px!important;height:100vh;display:block;padding:1rem;transition:all .15s ease-in-out}
+	.nav_bg_cusotom .navbar-collapse.show{width:100%!important;right:0}
+	.nav_bg_cusotom .navbar-collapse button.btn-close{display:block!important;margin:auto 0 auto auto}
+	.navbar-expand-lg .navbar-nav{gap:5px;margin-top:15px}
+	.nav_bg_cusotom .home_menu_items{justify-content:space-between}
+	.nav_bg_cusotom .dropdown-menu{width:100%!important}
+	/* Main Menu Section CSS End */
+	
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+.banner-thumb { position: relative;}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+.login-container::before { width: 49%;}
+.banner-bg {height: 100%;padding-bottom: 20px; border-radius: 0 0 0px 0;}
+.banner-title {font-size: 1.25rem;}
+.startups-section {padding: 41px 0 20px 0; position: relative; z-index: 0; margin-top: 0px;}
+
+.banner-txt{min-height: auto; padding-bottom: 28px;}
+.material-symbols-outlined{color: #fff;}
+.nav-item .material-symbols-outlined{color: #000!important;}
+.about-div {padding-bottom: 20px;}
+.impact-title {font-size: 1rem;}
+.impact-des {font-size: 0.7rem;}
+.mob-space{margin-top: 30px;}
+.success-bg{padding-top: 0px;}
+
+	/* Main Menu Section CSS Start */
+	.nav_bg_cusotom .navbar-collapse{position:fixed;top:0;right:-100%;z-index:9999;border-top:none;border-bottom:none;color:#212529;outline:0;border-top-left-radius:12px;border-bottom-left-radius:12px;box-shadow:-4px 4px 12px 0 rgba(0, 0, 0, .25);background:#fff;width:0px!important;height:100vh;display:block;padding:1rem;transition:all .15s ease-in-out}
+	.nav_bg_cusotom .navbar-collapse.show{width:400px!important;right:0}
+	.nav_bg_cusotom .navbar-collapse button.btn-close{display:block!important;margin:auto 0 auto auto}
+	.navbar-expand-lg .navbar-nav{gap:5px;margin-top:15px}
+	.nav_bg_cusotom .home_menu_items{justify-content:space-between; color: #000!important;}
+	.nav_bg_cusotom .dropdown-menu{width:100%!important}
+	.logo_box_cust img{width:50% !important}
+	/* Main Menu Section CSS End */
+	/* Banner Section CSS Start */
+	.banner-sec img{height:auto}
+	.carousel-inner button.carousel-control-prev, .carousel-inner button.carousel-control-next{width:30px;height:50px}
+	.banner-details{background:#fff;padding:30px 0}
+	.banner-details .container{position:initial}
+	.banner-text p{color:var(--SevenColor)}
+	.banner-text .all_heading{color:var(--SevenColor);font-size:1.5rem}
+	.banner-text p+p{margin:15px 0 0}
+	.news-updates-bg{padding:15px 15px;margin:15px 0 0}
+	.news-updates-bg ul li a{padding:15px 0 15px}
+	/* Banner Section CSS End */
+	/* Working Groups Section CSS Start */
+	.working-groups-sec{padding:30px 0}
+	.working-groups-box ul li a{padding:20px 20px}
+	.working-groups-content{display:block;margin:15px 0 0}
+	.working-groups-content h3{font-size:1.5rem;margin-bottom:10px}
+	.working-groups-content p{margin-bottom:10px}
+	/* Working Groups Section CSS End */
+	/* Event Section CSS Start */
+	.event-sec{padding:30px 0}
+	.ksc-steering{margin:0 0 25px}
+	.ksc-steering .card-sec .img-sec img{height:220px}
+	.ksc-steering .card-sec .desc-sec{padding:15px 15px}
+	.past-events-ticker{height:360px!important}
+	.past-events-ticker .past-events-box{width:100%}
+	.past-events-ticker .card-sec .desc-sec{padding:15px 15px}
+	/* Event Section CSS End */
+	/* Communities of Practice (CoPs) Section CSS Start */
+	.cops-sec{padding:30px 0}
+	.cops-sec .card-sec .desc-sec{padding:50px 20px 20px}
+	/* Communities of Practice (CoPs) Section CSS End */
+	/* Footer Section CSS Start */
+	.footer-sec{padding:30px 0px 20px}
+	.footer-top .col-md-12.col-lg-7{margin-top:25px}
+	.footer-top h4{margin-bottom:15px}
+	.footer-bottom ul{gap:8px 12px;flex-wrap:wrap}
+	.footer-bottom ul li a:after{right:-7px;height:12px}
+	/* Footer Section CSS End */
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+.banner-bg {height: 100%;padding-bottom: 20px; border-radius: 0 0 0px 0;}
+.banner-title {font-size: 1.25rem;}
+.startups-section {padding: 41px 0 20px 0; position: relative; z-index: 0; margin-top: 0px;}
+
+.profile-content .description {
+  font-size: 12px;}
+
+
+
+
+
+
+	ul.icons_list_top_header .dropdown_cust_menu{left:initial!important}
+	body{font-size:0.875rem}
+	/* Main Menu Section CSS Start */
+	.flex_item_box-inner_login_btn{gap:5px}
+	.navbar-expand-lg .navbar-nav{gap:0px}
+	.nav_bg_cusotom .home_menu_items{padding:3px 6px!important;font-size:.75rem}
+	.nav_bg_cusotom .dropdown-menu{width:200px!important;padding:8px 8px}
+  	.nav_bg_cusotom .dropdown-menu li a{padding:5px 10px!important}
+	/* Main Menu Section CSS End */
+	/* Banner Section CSS Start */
+	.carousel-inner button.carousel-control-prev, .carousel-inner button.carousel-control-next{width:25px;height:45px}
+	.banner-text .all_heading{font-size:1.5rem}
+	.banner-text p+p{margin:15px 0 0}
+	.news-updates-bg{padding:15px 15px;margin:0}
+	.news-updates-bg ul li a{line-height:24px;font-size:0.875rem;padding:10px 0 10px}
+	.all_heading{font-size:1.25rem}
+	.news-updates-bg .heading-sec > div:first-child .all_heading:before{bottom:-22px}
+	/* Banner Section CSS End */
+	/* Working Groups Section CSS Start */
+	.working-groups-sec{padding:30px 0}
+	.working-groups-box .heading-sec{grid-column:1 / 3}
+	.working-groups-box ul{grid-template-columns:repeat(3, 1fr);grid-column:1 / 3;grid-row:1 / 5}
+	.working-groups-box ul li a{padding:15px 15px}
+	.working-groups-content{display:block}
+	.working-groups-content h3{font-size:1.25rem}
+	/* Working Groups Section CSS End */
+	/* Event Section CSS Start */
+	.event-sec{padding:30px 0}
+	.ksc-steering .card-sec .img-sec img{height:182px}
+	.ksc-steering .card-sec .desc-sec{padding:15px 15px}
+	.ksc-steering .card-sec .desc-sec a{font-size:.875rem}
+	.ksc-steering .card-sec .desc-sec a .date{font-size:.813rem}
+	.past-events-ticker{height:281px!important}
+	.past-events-ticker .past-events-box{width:100%}
+	.past-events-ticker .card-sec .desc-sec{padding:15px 15px}
+	.past-events-ticker .card-sec .desc-sec a{font-size:.875rem}
+	.past-events-ticker .card-sec .desc-sec a .date{font-size:.813rem}
+	/* Event Section CSS End */
+	/* Communities of Practice (CoPs) Section CSS Start */
+	.cops-sec{padding:30px 0}
+	.cops-sec .card-sec .img-sec img{height:200px}
+	.cops-sec .card-sec .desc-sec{padding:50px 15px 15px}
+	.cops-sec .card-sec .desc-sec a{font-size:1rem;gap:10px}
+	/* Communities of Practice (CoPs) Section CSS End */
+	/* Footer Section CSS Start */
+	.footer-sec{padding:30px 0px 20px}
+	.footer-top .logo_box_cust img{width:60px}
+	.footer-top .logo_cust_text span.ministry_cust_text{font-size:1.5rem}
+	.footer-top .logo_cust_text span{font-size:.875rem}
+	.footer-top p{margin-top:20px;line-height:24px;font-size:.875rem}
+	.footer-top h4{margin-bottom:15px;font-size:1.125rem}
+	.footer-top ul li a{font-size:.875rem}
+	.footer-bottom ul{gap:8px 12px;flex-wrap:wrap}
+	.footer-bottom ul li a:after{right:-7px;height:12px}
+	/* Footer Section CSS End */
+}
+
+@media screen and (min-width: 1400px) and (max-width: 2000px) {
+.startups-section {
+  background: var(--ThreeColor);
+  padding: 176px 0 20px 0;}
+}
