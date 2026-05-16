@@ -1,10 +1,34 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import RideCard from "@/components/RideCard";
 
-export default function Listing() {
+function ListingContent() {
     const [activeTab, setActiveTab] = useState("rent");
+    const [rides, setRides] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    const searchParams = useSearchParams();
+    const pickup = searchParams.get("pickup") || "";
+    const dropoff = searchParams.get("dropoff") || "";
+
+    useEffect(() => {
+        setLoading(true);
+        // Bhejte waqt URL parameters lagayenge
+        const fetchUrl = `/api/rides?pickup=${encodeURIComponent(pickup)}&dropoff=${encodeURIComponent(dropoff)}`;
+        
+        fetch(fetchUrl)
+            .then((res) => res.json())
+            .then((data) => {
+                setRides(data);
+                setLoading(false);
+            })
+            .catch(err => {
+                console.error(err);
+                setLoading(false);
+            });
+    }, [pickup, dropoff]);
 
     return (
         <>
@@ -40,12 +64,12 @@ export default function Listing() {
                                     <div className="form-row">
                                         <div className="field">
                                             <h4>Pickup</h4>
-                                            <input type="text" className="map-icon" placeholder="Point Location" />
+                                            <input type="text" className="map-icon" placeholder="Point Location" defaultValue={pickup} />
                                         </div>
 
                                         <div className="field">
                                             <h4>Drop Off</h4>
-                                            <input type="text" className="map-icon" placeholder="Point Location" />
+                                            <input type="text" className="map-icon" placeholder="Point Location" defaultValue={dropoff} />
                                         </div>
 
                                         <div className="field">
@@ -195,16 +219,41 @@ export default function Listing() {
                             <nav style={{ "--bs-breadcrumb-divider": "''" }} aria-label="breadcrumb">
                                 <ol className="breadcrumb">
                                     <li className="breadcrumb-item">Tomorrow</li>
-                                    <li className="breadcrumb-item active" aria-current="page">Faridabad → Noida</li>
+                                    <li className="breadcrumb-item active" aria-current="page">
+                                        {pickup || "Anywhere"} → {dropoff || "Anywhere"}
+                                    </li>
                                 </ol>
                             </nav>
 
-                            <RideCard id="1" driverName="Ravi Kumar" price={90} rating="5.0" />
-                            <RideCard id="2" driverName="Sharad" price={90} rating="5.0" />
+                            {loading ? (
+                                <h4>Loading rides...</h4>
+                            ) : rides.length > 0 ? (
+                                rides.map((ride) => (
+                                    <RideCard
+                                        key={ride.id}
+                                        id={ride.id}
+                                        driverName={ride.driverName}
+                                        price={ride.price}
+                                        rating={ride.rating}
+                                        pickup={ride.pickup}
+                                        dropoff={ride.dropoff}
+                                    />
+                                ))
+                            ) : (
+                                <h4>No rides found for this route.</h4>
+                            )}
                         </div>
                     </div>
                 </div>
             </div>
         </>
+    );
+}
+
+export default function Listing() {
+    return (
+        <Suspense fallback={<div>Loading Page...</div>}>
+            <ListingContent />
+        </Suspense>
     );
 }

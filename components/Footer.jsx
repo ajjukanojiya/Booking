@@ -40,7 +40,7 @@ export default function Footer() {
             <div className="col-lg-3 col-md-6">
               <h5>Travel with carpool</h5>
               <ul className="footlink">
-                <li><Link href="#">About BIRAC</Link></li>
+                <li><Link href="/about-birac">About BIRAC</Link></li>
                 <li><Link href="#">Nashik → Pune</Link></li>
                 <li><Link href="#">Mumbai → Pune</Link></li>
                 <li><Link href="#">Pune → Aurangabad</Link></li>

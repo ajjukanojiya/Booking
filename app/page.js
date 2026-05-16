@@ -1,9 +1,20 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 export default function Home() {
   const [activeTab, setActiveTab] = useState("rent");
+  const [searchPickup, setSearchPickup] = useState("");
+  const [searchDropoff, setSearchDropoff] = useState("");
+  const router = useRouter();
 
+  const handleSearch = () => {
+    const params = new URLSearchParams();
+    if (searchPickup) params.set("pickup", searchPickup);
+    if (searchDropoff) params.set("dropoff", searchDropoff);
+    router.push(`/listing?${params.toString()}`);
+  };
   return (
     <>
       {/* banner section start here */}
@@ -55,12 +66,24 @@ export default function Home() {
                   <div className="form-row">
                     <div className="field">
                       <h4>Pickup</h4>
-                      <input type="text" className="map-icon" placeholder="Point Location" />
+                      <input 
+                        type="text" 
+                        className="map-icon" 
+                        placeholder="Point Location" 
+                        value={searchPickup}
+                        onChange={(e) => setSearchPickup(e.target.value)}
+                      />
                     </div>
 
                     <div className="field">
                       <h4>Drop Off</h4>
-                      <input type="text" className="map-icon" placeholder="Point Location" />
+                      <input 
+                        type="text" 
+                        className="map-icon" 
+                        placeholder="Point Location" 
+                        value={searchDropoff}
+                        onChange={(e) => setSearchDropoff(e.target.value)}
+                      />
                     </div>
 
                     <div className="field">
@@ -77,9 +100,7 @@ export default function Home() {
                       <input type="text" className="pass-icon" placeholder="1 passenger" />
                     </div>
 
-                    <Link href="/listing">
-                      <button className="quick-btn">Search Here !</button>
-                    </Link>
+                    <button className="quick-btn" onClick={handleSearch}>Search Here !</button>
                   </div>
                 </div>
 

@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-export default function RideCard({ id, driverName, price, rating }) {
+export default function RideCard({ id, driverName, price, rating, pickup, dropoff }) {
   return (
     <div className="ride-card">
       <div className="left-section">
         <div className="route">
           <div className="location">
-            00:20<br />Faridabad
+            00:20<br />{pickup}
           </div>
 
           <div className="line">
@@ -14,7 +14,7 @@ export default function RideCard({ id, driverName, price, rating }) {
           </div>
 
           <div className="location">
-            00:50<br />Noida
+            00:50<br />{dropoff}
           </div>
         </div>
 
